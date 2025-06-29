@@ -1,0 +1,16 @@
+{
+  "title": "Apps Script 공유 프로젝트",
+  "description": "아래 링크들을 클릭하여 관련 자료를 확인하세요.",
+  "links": [
+    {
+      "title": "Apps Script 예제 1",
+      "url": "https://script.google.com/d/example1/edit",
+      "description": "특정 기능을 자동화하는 스크립트 예제입니다."
+    },
+    {
+      "title": "Apps Script 예제 2",
+      "url": "https://script.google.com/d/example2/edit",
+      "description": "Google Sheets와 연동되는 스크립트입니다."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "기타 공유 프로젝트",
+  "description": "아래 링크들을 클릭하여 관련 자료를 확인하세요.",
+  "links": [
+    {
+      "title": "자료 링크 1",
+      "url": "https://example.com/data1",
+      "description": "흥미로운 데이터 시각화 자료입니다."
+    },
+    {
+      "title": "자료 링크 2",
+      "url": "https://example.com/data2",
+      "description": "유용한 팁과 트릭을 담은 문서입니다."
+    }
+  ]
+}

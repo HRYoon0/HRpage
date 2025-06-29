@@ -1,0 +1,16 @@
+{
+  "title": "파일 공유 프로젝트",
+  "description": "아래 링크들을 클릭하여 관련 자료를 확인하세요.",
+  "links": [
+    {
+      "title": "프로젝트 GitHub",
+      "url": "https://github.com/your-repo/file-sharing",
+      "description": "프로젝트의 소스 코드를 확인하세요."
+    },
+    {
+      "title": "데모 사이트",
+      "url": "https://your-demo.com/file-sharing",
+      "description": "실제 동작하는 프로젝트를 경험해보세요."
+    }
+  ]
+}
