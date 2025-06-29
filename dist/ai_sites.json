@@ -1,17 +1,27 @@
 [
   {
-    "title": "ChatGPT",
-    "url": "https://chat.openai.com/",
-    "description": "OpenAI에서 개발한 대규모 언어 모델입니다."
-  },
-  {
     "title": "Google Gemini",
-    "url": "https://gemini.google.com/",
-    "description": "Google에서 개발한 AI 모델입니다."
+    "url": "https://gemini.google.com",
+    "description": "무료로 강력한 기능 제공"
   },
   {
-    "title": "Midjourney",
-    "url": "https://www.midjourney.com/",
-    "description": "텍스트 설명을 이미지로 변환하는 AI 프로그램입니다."
+    "title": "Claude",
+    "url": "https://claude.ai/new",
+    "description": "코딩과 글쓰기에 강함"
+  },
+  {
+    "title": "Canva AI",
+    "url": "https://www.canva.com/ai",
+    "description": "웹페이지, 프레젠테이션 등 업무 및 수업에 필요한 다양한 코딩을 쉽게 가능"
+  },
+  {
+    "title": "NotebookLM",
+    "url": "https://notebooklm.google",
+    "description": "다양한 자료를 분석 및 팟캐스트 만들기 등 다양한 기능 제공, 학습 및 연구에 탁월"
+  },
+  {
+    "title": "Google AI Studio",
+    "url": "https://aistudio.google.com",
+    "description": "무료로 Gemini 활용 가능, Google이 제공하는 Gemini API 관리(무료, 사용량에 제한)"
   }
 ]
