@@ -1,3 +1,6 @@
+# 링크 수정
+public 폴더 내에 json 수정
+
 # Welcome to your Lovable project
 
 ## Project info
