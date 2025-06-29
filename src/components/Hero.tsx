@@ -96,7 +96,7 @@ const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) =>
           </div>
           
           {/* Scroll indicator */}
-          <div>
+          <div className="animate-bounce">
             <ArrowDown className="w-6 h-6 mx-auto text-gray-400" />
           </div>
         </div>
