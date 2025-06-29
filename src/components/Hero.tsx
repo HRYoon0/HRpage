@@ -48,7 +48,7 @@ const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) =>
           
           {/* Social Links */}
           <div className="flex flex-col items-center space-y-4 mb-12">
-            <span onClick={() => scrollToSection("about")} className="cursor-pointer text-lg font-semibold text-blue-600 hover:underline">
+            <span onClick={() => scrollToSection("about")} className="cursor-pointer text-lg font-semibold text-gray-700">
               바로가기 버튼
             </span>
             <div className="flex flex-row justify-center space-x-4">
