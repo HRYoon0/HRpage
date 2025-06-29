@@ -45,7 +45,7 @@ const Projects = () => {
 
   useEffect(() => {
     if (selectedProject && selectedProject.jsonPath) {
-      fetch(selectedProject.jsonPath)
+      fetch(`${import.meta.env.BASE_URL}${selectedProject.jsonPath}`)
         .then(response => response.json())
         .then(data => setSelectedProject(prev => ({ ...prev, ...data })))
         .catch(error => console.error('Error fetching project details:', error));

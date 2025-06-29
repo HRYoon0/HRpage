@@ -20,17 +20,17 @@ const About = () => {
   const [codingSites, setCodingSites] = useState([]);
 
   useEffect(() => {
-    fetch('/youtube_links.json')
+    fetch(`${import.meta.env.BASE_URL}youtube_links.json`)
       .then(response => response.json())
       .then(data => setYoutubeLinks(data))
       .catch(error => console.error('Error fetching YouTube links:', error));
 
-    fetch('/ai_sites.json')
+    fetch(`${import.meta.env.BASE_URL}ai_sites.json`)
       .then(response => response.json())
       .then(data => setAiSites(data))
       .catch(error => console.error('Error fetching AI sites:', error));
 
-    fetch('/coding_sites.json')
+    fetch(`${import.meta.env.BASE_URL}coding_sites.json`)
       .then(response => response.json())
       .then(data => setCodingSites(data))
       .catch(error => console.error('Error fetching Coding sites:', error));
