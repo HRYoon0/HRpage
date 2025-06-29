@@ -4,7 +4,7 @@
   "links": [
     {
       "title": "Word Test 통합 배포용",
-      "url": "https://docs.google.com/spreadsheets/d/1lryop7VP9AFLVoTQ4HuS0iDmQpBMVkZyYUTC-MrDsaY/copy?usp=sharing",
+      "url": "https://docs.google.com/spreadsheets/d/1lryop7VP9AFLVoTQ4HuS0iDmQpBMVkZyYUTC-MrDsaY/copy",
       "description": "구글 폼 쪽지시험 자동 정리 툴"
     },
     {
@@ -16,6 +16,11 @@
       "title": "AI 평어 생성기",
       "url": "https://script.google.com/macros/s/AKfycby57lHMIBficCaN4Ij2XXswIUicFRIVX57OTkpWy0KhTm7LHoDkvQAXoMjGPvgewcTTPA/exec",
       "description": "성취기준과 핵심 평가 요소에 맞게 평어 생성"
+    },
+    {
+      "title": "영어 단어 연습 앱",
+      "url": "https://docs.google.com/spreadsheets/d/1jNc8P7Yc36QVjOekzjPGCrPsxMNzJUoGl4v0hAe_buM/copy",
+      "description": "영어 단어 연습을 하며 성취감을 맛볼 수 있는 앱"
     }
   ]
 }
