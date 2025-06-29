@@ -5,6 +5,9 @@ on:
     branches:
       - main # 또는 master
 
+permissions: # 이 부분을 추가합니다.
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
