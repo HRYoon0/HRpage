@@ -51,7 +51,7 @@ const Projects = () => {
       fetch(`${import.meta.env.BASE_URL}${selectedProjectInitial.jsonPath}`)
         .then(response => response.json())
         .then(data => {
-          setFullProjectDetails({ ...selectedProjectInitial, ...data });
+          setFullProjectDetails({ ...selectedProjectInitial, links: data });
         })
         .catch(error => {
           console.error('Error fetching project details:', error);
