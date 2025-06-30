@@ -73,6 +73,10 @@ const Projects = () => {
         .then(response => response.json())
         .then(data => {
           setFullProjectDetails({ ...selectedProjectInitial, links: data });
+          setShowScrollButton(false);
+          if (scrollRef.current) {
+            scrollRef.current.scrollTop = 0;
+          }
         })
         .catch(error => {
           console.error('Error fetching project details:', error);

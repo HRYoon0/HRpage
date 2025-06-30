@@ -1,1 +1,1 @@
-fix: remove unnecessary 'relative' class from DialogContent to fix positioning
+fix: ensure scroll button is hidden on popup open and scroll position is reset
