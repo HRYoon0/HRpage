@@ -50,7 +50,7 @@ const Projects = () => {
         .then(data => setSelectedProject(prev => ({ ...prev, ...data })))
         .catch(error => console.error('Error fetching project details:', error));
     }
-  }, [selectedProject?.jsonPath]);
+  }, [selectedProject]);
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
