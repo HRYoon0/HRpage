@@ -1,1 +1,1 @@
-fix: reduce gap between links in About section popup
+feat: improve link distinction in popups with subtle border and shadow

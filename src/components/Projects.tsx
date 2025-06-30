@@ -98,7 +98,9 @@ const Projects = () => {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10 border-0 overflow-hidden">
                   <div className="absolute top-4 left-4 flex space-x-2">
-                    <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                    <DialogClose asChild>
+                      <span className="w-3 h-3 rounded-full bg-red-500 cursor-pointer"></span>
+                    </DialogClose>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
                   </div>
@@ -112,7 +114,7 @@ const Projects = () => {
                           {fullProjectDetails.description}
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="grid gap-2 py-4 border-0">
+                      <div className="grid gap-1 py-4 border-0">
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
                           <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group border border-gray-200 shadow-sm">
                             <div className="flex flex-col">
@@ -122,13 +124,7 @@ const Projects = () => {
                           </a>
                         ))}
                       </div>
-                      <DialogFooter className="sm:justify-start border-0">
-                        <DialogClose asChild>
-                          <Button type="button" variant="secondary">
-                            닫기
-                          </Button>
-                        </DialogClose>
-                      </DialogFooter>
+                      
                     </>
                   ) : (
                     <div className="text-center py-8">프로젝트 정보를 불러올 수 없습니다.</div>

@@ -83,7 +83,9 @@ const About = () => {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10">
                   <div className="absolute top-4 left-4 flex space-x-2">
-                    <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                    <DialogClose asChild>
+                    <span className="w-3 h-3 rounded-full bg-red-500 cursor-pointer"></span>
+                  </DialogClose>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
                   </div>
@@ -93,7 +95,7 @@ const About = () => {
                       아래 링크들을 클릭하여 관련 자료를 확인하세요.
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="grid gap-2 py-4 border-0">
+                  <div className="grid gap-1 py-4 border-0">
                     {skill.title === "AI 유튜브 자료" && (
                       <>
                         {youtubeLinks.map((link, linkIndex) => (
@@ -131,13 +133,7 @@ const About = () => {
                       </>
                     )}
                   </div>
-                  <DialogFooter className="sm:justify-start border-0">
-                    <DialogClose asChild>
-                      <Button type="button" variant="secondary">
-                        닫기
-                      </Button>
-                    </DialogClose>
-                  </DialogFooter>
+                  
                 </DialogContent>
               </Dialog>
             </div>
