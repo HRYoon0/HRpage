@@ -97,7 +97,6 @@ const About = () => {
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
-                            <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-blue-600" />
                           </a>
                         ))}
                       </>
@@ -110,7 +109,6 @@ const About = () => {
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
-                            <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-blue-600" />
                           </a>
                         ))}
                       </>
@@ -123,7 +121,6 @@ const About = () => {
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
-                            <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-blue-600" />
                           </a>
                         ))}
                       </>
