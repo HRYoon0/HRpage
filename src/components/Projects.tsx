@@ -14,7 +14,9 @@ import {
 import { Button } from './ui/button';
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectInitial, setSelectedProjectInitial] = useState(null);
+  const [fullProjectDetails, setFullProjectDetails] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const projects = [
     {
@@ -44,13 +46,24 @@ const Projects = () => {
   ];
 
   useEffect(() => {
-    if (selectedProject && selectedProject.jsonPath) {
-      fetch(`${import.meta.env.BASE_URL}${selectedProject.jsonPath}`)
+    if (selectedProjectInitial && selectedProjectInitial.jsonPath) {
+      setIsLoading(true);
+      fetch(`${import.meta.env.BASE_URL}${selectedProjectInitial.jsonPath}`)
         .then(response => response.json())
-        .then(data => setSelectedProject(prev => ({ ...prev, ...data })))
-        .catch(error => console.error('Error fetching project details:', error));
+        .then(data => {
+          setFullProjectDetails({ ...selectedProjectInitial, ...data });
+        })
+        .catch(error => {
+          console.error('Error fetching project details:', error);
+          setFullProjectDetails(null); // Clear details on error
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } else {
+      setFullProjectDetails(null); // Clear details if no project is selected
     }
-  }, [selectedProject]);
+  }, [selectedProjectInitial]);
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -66,11 +79,11 @@ const Projects = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group">
-              <Dialog onOpenChange={(open) => !open && setSelectedProject(null)}>
+              <Dialog onOpenChange={(open) => !open && setSelectedProjectInitial(null)}>
                 <DialogTrigger asChild>
                   <div 
                     className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 cursor-pointer"
-                    onClick={() => setSelectedProject(project)}
+                    onClick={() => setSelectedProjectInitial(project)}
                   >
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${project.gradient} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                       <project.icon className="w-8 h-8 text-white" />
@@ -83,16 +96,18 @@ const Projects = () => {
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md">
-                  {selectedProject && (
+                  {isLoading ? (
+                    <div className="text-center py-8">로딩 중...</div>
+                  ) : fullProjectDetails ? (
                     <>
                       <DialogHeader>
-                        <DialogTitle>{selectedProject.title}</DialogTitle>
+                        <DialogTitle>{fullProjectDetails.title}</DialogTitle>
                         <DialogDescription>
-                          {selectedProject.description}
+                          {fullProjectDetails.description}
                         </DialogDescription>
                       </DialogHeader>
                       <div className="grid gap-4 py-4">
-                        {selectedProject.links && selectedProject.links.map((link, linkIndex) => (
+                        {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
                           <div key={linkIndex} className="flex items-center justify-between py-2 border-b border-gray-200 last:border-b-0">
                             <div className="flex flex-col">
                               <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
@@ -112,6 +127,8 @@ const Projects = () => {
                         </DialogClose>
                       </DialogFooter>
                     </>
+                  ) : (
+                    <div className="text-center py-8">프로젝트 정보를 불러올 수 없습니다.</div>
                   )}
                 </DialogContent>
               </Dialog>
