@@ -96,7 +96,7 @@ const Projects = () => {
                     
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md">
+                <DialogContent className="sm:max-w-md bg-white rounded-lg shadow-xl border border-gray-200 p-6">
                   {isLoading ? (
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (
@@ -109,15 +109,13 @@ const Projects = () => {
                       </DialogHeader>
                       <div className="grid gap-4 py-4">
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
-                          <div key={linkIndex} className="flex items-center justify-between py-2 border-b border-gray-200 last:border-b-0">
+                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 rounded-md hover:bg-gray-50 transition-colors duration-200 group">
                             <div className="flex flex-col">
-                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                {link.title}
-                              </a>
+                              <span className="text-blue-600 group-hover:underline font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
-                            <ExternalLink className="w-4 h-4 text-gray-500" />
-                          </div>
+                            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600" />
+                          </a>
                         ))}
                       </div>
                       <DialogFooter className="sm:justify-start">
