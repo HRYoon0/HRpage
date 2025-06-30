@@ -96,8 +96,8 @@ const Projects = () => {
                     
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10">
-                  <div className="flex space-x-2 mb-4">
+                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10 relative">
+                  <div className="absolute top-4 left-4 flex space-x-2">
                     <span className="w-3 h-3 rounded-full bg-red-500"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
