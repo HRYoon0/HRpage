@@ -1,1 +1,1 @@
-feat: add background color to project popup header
+fix: reduce gap between links in project popup

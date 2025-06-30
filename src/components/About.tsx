@@ -93,7 +93,7 @@ const About = () => {
                       아래 링크들을 클릭하여 관련 자료를 확인하세요.
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="grid gap-4 py-4 border-0">
+                  <div className="grid gap-2 py-4 border-0">
                     {skill.title === "AI 유튜브 자료" && (
                       <>
                         {youtubeLinks.map((link, linkIndex) => (
