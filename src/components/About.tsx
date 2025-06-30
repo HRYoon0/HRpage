@@ -94,10 +94,12 @@ const About = () => {
             <div key={index} className="group">
               <Dialog onOpenChange={(open) => {
                 if (open) {
-                  setShowScrollButton(false);
-                  if (scrollRef.current) {
-                    scrollRef.current.scrollTop = 0;
-                  }
+                  setTimeout(() => {
+                    setShowScrollButton(false);
+                    if (scrollRef.current) {
+                      scrollRef.current.scrollTop = 0;
+                    }
+                  }, 0); // Delay to ensure DOM is ready
                 }
               }}>
                 <DialogTrigger asChild>
