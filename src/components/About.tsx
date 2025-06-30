@@ -1,6 +1,6 @@
 
-import { Code, Palette, Zap, Youtube, Bot } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Code, Palette, Zap, Youtube, Bot, ArrowUp } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -18,6 +18,27 @@ const About = () => {
   const [youtubeLinks, setYoutubeLinks] = useState([]);
   const [aiSites, setAiSites] = useState([]);
   const [codingSites, setCodingSites] = useState([]);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        setShowScrollButton(scrollRef.current.scrollTop > 100);
+      }
+    };
+
+    const currentScrollRef = scrollRef.current;
+    if (currentScrollRef) {
+      currentScrollRef.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (currentScrollRef) {
+        currentScrollRef.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}youtube_links.json`)
@@ -81,11 +102,11 @@ const About = () => {
                     <p className="text-gray-600 text-center leading-relaxed">{skill.description}</p>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10">
+                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10 relative">
                   <div className="absolute top-4 left-4 flex space-x-2">
                     <DialogClose asChild>
-                    <span className="w-3 h-3 rounded-full bg-red-500 cursor-pointer"></span>
-                  </DialogClose>
+                      <span className="w-3 h-3 rounded-full bg-red-500 cursor-pointer"></span>
+                    </DialogClose>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
                   </div>
@@ -95,7 +116,7 @@ const About = () => {
                       아래 링크들을 클릭하여 관련 자료를 확인하세요.
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="grid gap-1 py-4 border-0">
+                  <div ref={scrollRef} className="grid gap-1 py-4 border-0 max-h-[400px] overflow-y-auto">
                     {skill.title === "AI 유튜브 자료" && (
                       <>
                         {youtubeLinks.map((link, linkIndex) => (
@@ -133,7 +154,14 @@ const About = () => {
                       </>
                     )}
                   </div>
-                  
+                  {showScrollButton && (
+                    <button
+                      onClick={() => scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' })}
+                      className="absolute bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-200"
+                    >
+                      <ArrowUp className="w-5 h-5" />
+                    </button>
+                  )}
                 </DialogContent>
               </Dialog>
             </div>

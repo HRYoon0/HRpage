@@ -1,1 +1,1 @@
-feat: improve link distinction in popups with subtle border and shadow
+feat: further reduce link gap, remove close button, and add close functionality to red dot
