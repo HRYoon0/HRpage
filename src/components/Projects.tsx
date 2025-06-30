@@ -23,7 +23,7 @@ const Projects = () => {
       icon: FileText,
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       gradient: "from-blue-500 to-purple-600",
-      jsonPath: "/projects/file_sharing.json"
+      jsonPath: "/file_sharing.json"
     },
     {
       title: "Apps Script 공유",
@@ -31,7 +31,7 @@ const Projects = () => {
       icon: Code,
       tech: ["Vue.js", "Firebase", "Vuex", "WebSocket"],
       gradient: "from-green-500 to-teal-600",
-      jsonPath: "/projects/task_manager.json"
+      jsonPath: "/apps_script.json"
     },
     {
       title: "기타 공유",
@@ -39,7 +39,7 @@ const Projects = () => {
       icon: Share2,
       tech: ["React", "Chart.js", "OpenWeather API", "Tailwind"],
       gradient: "from-orange-500 to-red-600",
-      jsonPath: "/projects/weather_dashboard.json"
+      jsonPath: "/other_sharing.json"
     }
   ];
 
