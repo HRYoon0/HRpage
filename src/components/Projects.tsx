@@ -96,7 +96,7 @@ const Projects = () => {
                     
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-white rounded-lg shadow-xl border border-gray-200 p-6">
+                <DialogContent className="sm:max-w-md bg-white rounded-lg shadow-xl border border-gray-200 p-8">
                   {isLoading ? (
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (
@@ -109,12 +109,12 @@ const Projects = () => {
                       </DialogHeader>
                       <div className="grid gap-4 py-4">
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
-                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-3 rounded-md hover:bg-gray-50 transition-colors duration-200 group">
+                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-md hover:bg-gray-50 transition-colors duration-200 group border border-transparent hover:border-gray-200">
                             <div className="flex flex-col">
-                              <span className="text-blue-600 group-hover:underline font-medium">{link.title}</span>
+                              <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
-                            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600" />
+                            <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-blue-600" />
                           </a>
                         ))}
                       </div>
