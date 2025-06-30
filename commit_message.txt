@@ -1,1 +1,1 @@
-feat: further reduce link gap, remove close button, and add close functionality to red dot
+feat: add scroll functionality and scroll-to-top button to popups
