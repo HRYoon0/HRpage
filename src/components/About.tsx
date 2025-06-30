@@ -87,13 +87,13 @@ const About = () => {
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
                   </div>
-                  <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl">
+                  <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl border-0">
                     <DialogTitle>{skill.title}</DialogTitle>
                     <DialogDescription>
                       아래 링크들을 클릭하여 관련 자료를 확인하세요.
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="grid gap-4 py-4">
+                  <div className="grid gap-4 py-4 border-0">
                     {skill.title === "AI 유튜브 자료" && (
                       <>
                         {youtubeLinks.map((link, linkIndex) => (
@@ -131,7 +131,7 @@ const About = () => {
                       </>
                     )}
                   </div>
-                  <DialogFooter className="sm:justify-start">
+                  <DialogFooter className="sm:justify-start border-0">
                     <DialogClose asChild>
                       <Button type="button" variant="secondary">
                         닫기

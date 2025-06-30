@@ -106,13 +106,13 @@ const Projects = () => {
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (
                     <>
-                      <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl">
+                      <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl border-0">
                         <DialogTitle>{fullProjectDetails.title}</DialogTitle>
                         <DialogDescription>
                           {fullProjectDetails.description}
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="grid gap-4 py-4">
+                      <div className="grid gap-4 py-4 border-0">
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
                           <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group">
                             <div className="flex flex-col">
@@ -122,7 +122,7 @@ const Projects = () => {
                           </a>
                         ))}
                       </div>
-                      <DialogFooter className="sm:justify-start">
+                      <DialogFooter className="sm:justify-start border-0">
                         <DialogClose asChild>
                           <Button type="button" variant="secondary">
                             닫기
