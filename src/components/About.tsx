@@ -81,7 +81,7 @@ const About = () => {
                     <p className="text-gray-600 text-center leading-relaxed">{skill.description}</p>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-white rounded-lg shadow-xl border border-gray-200 p-8">
+                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10">
                   <DialogHeader>
                     <DialogTitle>{skill.title}</DialogTitle>
                     <DialogDescription>
@@ -92,7 +92,7 @@ const About = () => {
                     {skill.title === "AI 유튜브 자료" && (
                       <>
                         {youtubeLinks.map((link, linkIndex) => (
-                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-md hover:bg-gray-50 transition-colors duration-200 group border border-transparent hover:border-gray-200">
+                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group">
                             <div className="flex flex-col">
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
@@ -105,7 +105,7 @@ const About = () => {
                     {skill.title === "AI 사이트" && (
                       <>
                         {aiSites.map((link, linkIndex) => (
-                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-md hover:bg-gray-50 transition-colors duration-200 group border border-transparent hover:border-gray-200">
+                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group">
                             <div className="flex flex-col">
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
@@ -118,7 +118,7 @@ const About = () => {
                     {skill.title === "Coding 사이트" && (
                       <>
                         {codingSites.map((link, linkIndex) => (
-                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-md hover:bg-gray-50 transition-colors duration-200 group border border-transparent hover:border-gray-200">
+                          <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group">
                             <div className="flex flex-col">
                               <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
