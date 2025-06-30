@@ -101,7 +101,7 @@ const Projects = () => {
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (
                     <>
-                      <DialogHeader>
+                      <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl">
                         <DialogTitle>{fullProjectDetails.title}</DialogTitle>
                         <DialogDescription>
                           {fullProjectDetails.description}

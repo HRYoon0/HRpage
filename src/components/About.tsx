@@ -82,7 +82,7 @@ const About = () => {
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10">
-                  <DialogHeader>
+                  <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl">
                     <DialogTitle>{skill.title}</DialogTitle>
                     <DialogDescription>
                       아래 링크들을 클릭하여 관련 자료를 확인하세요.
