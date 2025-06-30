@@ -83,6 +83,7 @@ const Projects = () => {
                 <DialogTrigger asChild>
                   <div 
                     className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 cursor-pointer"
+                    onClick={() => setSelectedProjectInitial(project)}
                     
                   >
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${project.gradient} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
