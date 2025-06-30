@@ -96,7 +96,7 @@ const Projects = () => {
                     
                   </div>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10 border-0">
+                <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl p-10 border-0 overflow-hidden">
                   <div className="absolute top-4 left-4 flex space-x-2">
                     <span className="w-3 h-3 rounded-full bg-red-500"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
@@ -106,7 +106,7 @@ const Projects = () => {
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (
                     <>
-                      <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl border-0">
+                      <DialogHeader className="px-6 py-4 border-0">
                         <DialogTitle>{fullProjectDetails.title}</DialogTitle>
                         <DialogDescription>
                           {fullProjectDetails.description}
