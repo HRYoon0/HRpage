@@ -112,7 +112,7 @@ const Projects = () => {
                           {fullProjectDetails.description}
                         </DialogDescription>
                       </DialogHeader>
-                      <div className="grid gap-4 py-4 border-0">
+                      <div className="grid gap-2 py-4 border-0">
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
                           <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group border-0">
                             <div className="flex flex-col">

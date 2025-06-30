@@ -1,1 +1,1 @@
-fix: remove border from project popup and adjust header style
+feat: add background color to project popup header
