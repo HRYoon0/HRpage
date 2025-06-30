@@ -97,6 +97,11 @@ const Projects = () => {
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10">
+                  <div className="flex space-x-2 mb-4">
+                    <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  </div>
                   {isLoading ? (
                     <div className="text-center py-8">로딩 중...</div>
                   ) : fullProjectDetails ? (

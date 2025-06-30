@@ -82,6 +82,11 @@ const About = () => {
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md bg-white rounded-xl shadow-2xl border border-gray-200 p-10">
+                  <div className="flex space-x-2 mb-4">
+                    <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  </div>
                   <DialogHeader className="bg-gray-50 px-6 py-4 rounded-t-xl">
                     <DialogTitle>{skill.title}</DialogTitle>
                     <DialogDescription>
