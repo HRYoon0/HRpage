@@ -92,7 +92,14 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <div key={index} className="group">
-              <Dialog>
+              <Dialog onOpenChange={(open) => {
+                if (open) {
+                  setShowScrollButton(false);
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTop = 0;
+                  }
+                }
+              }}>
                 <DialogTrigger asChild>
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 cursor-pointer">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${skill.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>

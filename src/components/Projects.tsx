@@ -100,7 +100,16 @@ const Projects = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group">
-              <Dialog onOpenChange={(open) => !open && setSelectedProjectInitial(null)}>
+              <Dialog onOpenChange={(open) => {
+                if (open) {
+                  setShowScrollButton(false);
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTop = 0;
+                  }
+                } else {
+                  setSelectedProjectInitial(null);
+                }
+              }}>
                 <DialogTrigger asChild>
                   <div 
                     className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 cursor-pointer"

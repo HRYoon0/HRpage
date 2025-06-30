@@ -1,1 +1,1 @@
-feat: add scroll functionality and scroll-to-top button to popups
+fix: remove unnecessary 'relative' class from DialogContent to fix positioning
