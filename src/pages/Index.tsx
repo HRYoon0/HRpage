@@ -43,7 +43,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div>
       <Hero scrollToSection={scrollToSection} />
       <About id="about" />
       <Projects id="projects" />
