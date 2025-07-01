@@ -106,12 +106,10 @@ const Projects = () => {
             <div key={index} className="group">
               <Dialog onOpenChange={(open) => {
                 if (open) {
-                  setTimeout(() => {
-                    setShowScrollButton(false);
-                    if (scrollRef.current) {
-                      scrollRef.current.scrollTop = 0;
-                    }
-                  }, 0); // Delay to ensure DOM is ready
+                  setShowScrollButton(false);
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTop = 0;
+                  }
                 } else {
                   setSelectedProjectInitial(null);
                 }
