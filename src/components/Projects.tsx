@@ -73,7 +73,6 @@ const Projects = () => {
         .then(response => response.json())
         .then(data => {
           setFullProjectDetails({ ...selectedProjectInitial, links: data });
-          setShowScrollButton(false);
           if (scrollRef.current) {
             scrollRef.current.scrollTop = 0;
           }
@@ -84,6 +83,7 @@ const Projects = () => {
         })
         .finally(() => {
           setIsLoading(false);
+          setShowScrollButton(false);
         });
     } else {
       setFullProjectDetails(null); // Clear details if no project is selected
@@ -106,12 +106,10 @@ const Projects = () => {
             <div key={index} className="group">
               <Dialog onOpenChange={(open) => {
                 if (open) {
-                  setTimeout(() => {
-                    setShowScrollButton(false);
-                    if (scrollRef.current) {
-                      scrollRef.current.scrollTop = 0;
-                    }
-                  }, 0); // Delay to ensure DOM is ready
+                  if (scrollRef.current) {
+                    scrollRef.current.scrollTop = 0;
+                  }
+                  setShowScrollButton(false); // Ensure hidden on open
                 } else {
                   setSelectedProjectInitial(null);
                 }
