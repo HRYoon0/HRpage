@@ -19,11 +19,10 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [isDialogOpening, setIsDialogOpening] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollRef.current && isDialogOpening) {
+      if (scrollRef.current) {
         setShowScrollButton(scrollRef.current.scrollTop > 100);
       }
     };
@@ -76,7 +75,6 @@ const Projects = () => {
           setFullProjectDetails({ ...selectedProjectInitial, links: data });
           if (scrollRef.current) {
             scrollRef.current.scrollTop = 0;
-            setShowScrollButton(false);
           }
         })
         .catch(error => {
@@ -85,6 +83,7 @@ const Projects = () => {
         })
         .finally(() => {
           setIsLoading(false);
+          setShowScrollButton(false);
         });
     } else {
       setFullProjectDetails(null); // Clear details if no project is selected
@@ -106,12 +105,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="group">
               <Dialog onOpenChange={(open) => {
-                setIsDialogOpening(open);
                 if (open) {
                   if (scrollRef.current) {
                     scrollRef.current.scrollTop = 0;
                   }
-                  setShowScrollButton(false);
+                  setShowScrollButton(false); // Ensure hidden on open
                 } else {
                   setSelectedProjectInitial(null);
                 }
