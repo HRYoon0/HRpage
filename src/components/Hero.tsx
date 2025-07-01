@@ -1,5 +1,5 @@
 
-import { ArrowDown, Github, Linkedin, Mail, Bot, Code } from 'lucide-react';
+import { Github, Linkedin, Mail, Bot, Code } from 'lucide-react';
 import { useState } from 'react';
 import {
   Dialog,
@@ -15,7 +15,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Copy } from 'lucide-react';
 
-const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) => {
+const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
       {/* Background decoration */}
@@ -48,15 +48,15 @@ const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) =>
           
           {/* Social Links */}
           <div className="flex flex-col items-center space-y-4 mb-12">
-            <span onClick={() => scrollToSection("about")} className="cursor-pointer text-lg font-semibold text-gray-700">
+            <span className="cursor-pointer text-lg font-semibold text-gray-700">
               바로가기 버튼
             </span>
             <div className="flex flex-row justify-center space-x-4">
-              <a onClick={() => scrollToSection("about")} className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
+              <a className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
                 <Bot className="w-6 h-6 text-gray-700 group-hover:text-blue-600" />
                 <span className="text-gray-700 group-hover:text-blue-600 font-medium">AI & Coding</span>
               </a>
-              <a onClick={() => scrollToSection("projects")} className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
+              <a className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
                 <Code className="w-6 h-6 text-gray-700 group-hover:text-blue-600" />
                 <span className="text-gray-700 group-hover:text-blue-600 font-medium">Projects</span>
               </a>
