@@ -17,7 +17,7 @@ import { Copy } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative">
+    <section id="hero" className="flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-50">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-purple-100/20"></div>
