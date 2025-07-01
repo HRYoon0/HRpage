@@ -19,10 +19,11 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [isDialogOpening, setIsDialogOpening] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollRef.current) {
+      if (scrollRef.current && isDialogOpening) {
         setShowScrollButton(scrollRef.current.scrollTop > 100);
       }
     };
@@ -105,11 +106,12 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="group">
               <Dialog onOpenChange={(open) => {
+                setIsDialogOpening(open);
                 if (open) {
-                  setShowScrollButton(false);
                   if (scrollRef.current) {
                     scrollRef.current.scrollTop = 0;
                   }
+                  setShowScrollButton(false);
                 } else {
                   setSelectedProjectInitial(null);
                 }
