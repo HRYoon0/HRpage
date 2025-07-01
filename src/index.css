@@ -103,6 +103,12 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera*/
   }
 }
 
