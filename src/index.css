@@ -105,6 +105,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
     overflow: hidden; /* Hide all scrollbars */
+    overflow-y: hidden; /* Explicitly hide vertical scrollbar */
   }
 }
 
