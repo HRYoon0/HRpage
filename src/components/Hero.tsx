@@ -14,6 +14,7 @@ import {
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Copy } from 'lucide-react';
+import TypingEffect from './TypingEffect';
 
 const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) => {
   return (
@@ -26,11 +27,24 @@ const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) =>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          {/* Profile Image */}
-          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1 shadow-2xl">
-            <div className="w-full h-full rounded-full bg-gray-200 flex items-center justify-center text-4xl font-bold text-gray-600">
-              HR
+          
+          {/* Terminal-like window */}
+          <div className="bg-gray-800 text-green-400 font-mono text-left p-4 rounded-lg shadow-lg max-w-xl mx-auto mb-8 h-40">
+            <div className="flex justify-between items-center mb-2">
+              <div className="flex space-x-2">
+                <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+              </div>
+              <span className="text-sm text-gray-400">bash</span>
             </div>
+            <pre className="whitespace-pre-wrap">
+              <TypingEffect text="$ npm install future-educator --save
++ future-educator@1.0.0
+$ npm start --project=innovative-learning
+> Empowering students with AI and coding skills...
+" typingSpeed={50} loop={true} />
+            </pre>
           </div>
           
           {/* Name and Title */}
