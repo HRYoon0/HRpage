@@ -1,1 +1,1 @@
-fix: ensure scroll button is hidden on popup open and scroll position is reset after data load in Projects.tsx
+fix: use setTimeout for scroll button visibility and position reset on popup open
