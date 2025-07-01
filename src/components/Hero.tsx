@@ -46,6 +46,13 @@ $ npm start --project=innovative-learning
 " typingSpeed={50} loop={true} />
             </pre>
           </div>
+
+          {/* Profile Image (HR) */}
+          <div className="w-32 h-16 mx-auto mb-8 rounded-xl bg-gradient-to-r from-blue-400 to-purple-500 p-1 shadow-2xl flex items-center justify-center">
+            <div className="w-full h-full rounded-lg bg-gray-200 flex items-center justify-center text-3xl font-bold text-gray-600">
+              H.R.
+            </div>
+          </div>
           
           {/* Name and Title */}
           
@@ -56,8 +63,8 @@ $ npm start --project=innovative-learning
           {/* Description */}
           <p className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
             환영합니다! <br />
-            AI와 코딩에 늘 관심을 가지고 있는 초등교사입니다. <br />
-            편한 교실 환경을 만들고자 늘 공부하고 있습니다!
+            AI와 코딩에 관심이 많은 초등교사입니다. <br />
+            스마트한 교실 환경을 만들고자 늘 공부하고 있습니다!
           </p>
           
           {/* Social Links */}
