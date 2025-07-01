@@ -6,10 +6,16 @@ import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const scrollToSection = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
     <div className="min-h-screen">
-      <Hero />
+      <Hero scrollToSection={scrollToSection} />
       <About id="about" />
       <Projects id="projects" />
       <Footer id="footer" />

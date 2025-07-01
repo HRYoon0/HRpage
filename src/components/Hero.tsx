@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Mail, Bot, Code } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Bot, Code } from 'lucide-react';
 import { useState } from 'react';
 import {
   Dialog,
@@ -15,7 +15,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Copy } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ scrollToSection }: { scrollToSection: (id: string) => void }) => {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 relative">
       {/* Background decoration */}
@@ -48,15 +48,13 @@ const Hero = () => {
           
           {/* Social Links */}
           <div className="flex flex-col items-center space-y-4 mb-12">
-            <span className="cursor-pointer text-lg font-semibold text-gray-700">
-              바로가기 버튼
-            </span>
+            
             <div className="flex flex-row justify-center space-x-4">
-              <a className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
+              <a onClick={() => scrollToSection("about")} className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
                 <Bot className="w-6 h-6 text-gray-700 group-hover:text-blue-600" />
                 <span className="text-gray-700 group-hover:text-blue-600 font-medium">AI & Coding</span>
               </a>
-              <a className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
+              <a onClick={() => scrollToSection("projects")} className="flex items-center space-x-2 p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group cursor-pointer">
                 <Code className="w-6 h-6 text-gray-700 group-hover:text-blue-600" />
                 <span className="text-gray-700 group-hover:text-blue-600 font-medium">Projects</span>
               </a>
@@ -95,7 +93,10 @@ const Hero = () => {
             </div>
           </div>
           
-          
+          {/* Scroll indicator */}
+          <div className="animate-bounce">
+            <ArrowDown className="w-6 h-6 mx-auto text-gray-400" />
+          </div>
         </div>
       </div>
     </section>

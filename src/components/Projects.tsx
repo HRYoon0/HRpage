@@ -152,7 +152,7 @@ const Projects = () => {
                         {fullProjectDetails.links && fullProjectDetails.links.map((link, linkIndex) => (
                           <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 group border border-gray-200 shadow-sm">
                             <div className="flex flex-col">
-                              <span className="text-gray-800 group-hover:text-blue-600 font-medium">{link.title}</span>
+                              <span className="text-gray-800 group-hover:text-blue-600 font-bold">{link.title}</span>
                               {link.description && <p className="text-sm text-gray-500">{link.description}</p>}
                             </div>
                           </a>

@@ -121,3 +121,39 @@ All colors MUST be HSL.
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom scrollbar for dialogs (modern and sleek) */
+.dialog-scrollbar-style::-webkit-scrollbar {
+  width: 6px; /* Make it thinner */
+}
+
+.dialog-scrollbar-style::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent track */
+}
+
+.dialog-scrollbar-style::-webkit-scrollbar-thumb {
+  background-color: rgba(140, 140, 140, 0.3); /* Subtle, semi-transparent grey */
+  border-radius: 3px; /* Slightly less rounded for a modern look */
+  border: none; /* Remove border for a cleaner look */
+}
+
+.dialog-scrollbar-style::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(140, 140, 140, 0.5); /* Slightly darker on hover */
+}
+
+/* For Firefox */
+.dialog-scrollbar-style {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgba(140, 140, 140, 0.3) transparent; /* thumb and track color */
+}
