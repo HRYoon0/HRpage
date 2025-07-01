@@ -9,7 +9,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Temporarily empty to debug scrollbar */}
+      <Hero />
     </div>
   );
 };
