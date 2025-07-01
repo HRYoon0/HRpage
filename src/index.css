@@ -62,7 +62,7 @@ All colors MUST be HSL.
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
@@ -103,13 +103,6 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
-    overflow: hidden; /* Hide all scrollbars */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  html::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera*/
   }
 }
 
