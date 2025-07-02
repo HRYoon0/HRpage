@@ -12,6 +12,7 @@ import {
   DialogFooter
 } from './ui/dialog';
 import { Button } from './ui/button';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const Projects = () => {
   const [selectedProjectInitial, setSelectedProjectInitial] = useState(null);
@@ -19,6 +20,7 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const sectionRef = useScrollAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,7 +93,7 @@ const Projects = () => {
   }, [selectedProjectInitial]);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section ref={sectionRef} id="projects" className="py-20 bg-gray-50 opacity-0 transition-all duration-1000">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">Projects</h2>

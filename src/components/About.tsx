@@ -13,6 +13,7 @@ import {
 } from './ui/dialog';
 import { Button } from './ui/button';
 import { ExternalLink } from 'lucide-react';
+import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const About = () => {
   const [youtubeLinks, setYoutubeLinks] = useState([]);
@@ -20,6 +21,7 @@ const About = () => {
   const [codingSites, setCodingSites] = useState([]);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const sectionRef = useScrollAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +81,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section ref={sectionRef} id="about" className="py-20 bg-white opacity-0 transition-all duration-1000">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-900">AI & Coding</h2>
@@ -182,3 +184,4 @@ const About = () => {
 };
 
 export default About;
+
