@@ -10,8 +10,13 @@
       "description": "이수증 취합을 쉽게 해보세요!"
     },
     {
+      "title": "AI 평가 기준 생성기",
+      "url": "https://script.google.com/macros/s/AKfycbz5aYu4Gx7CHtU0YnUtFwYvT7QAeNQQJgF3HdR414TdrMJcHIj5P85bYQrouCc1mBBs/exec",
+      "description": "성취기준과 평가 요소에 맞게 평가 기준 생성"
+    },
+    {
       "title": "AI 문제 생성기 v3",
-      "url": "https://script.google.com/macros/s/AKfycbzUaWcdV_kxdRKCg6UIA8xYDwGgVCOEjzXAyrkhysIA30FDw5BgD1tSCoNKFV9ifS5Gvg/exec",
+      "url": "https://script.google.com/macros/s/AKfycbxdkuKuCeIlxOqu1NhWOW2WeyPx_F3VN_7K26JccIpzCPeL848rIVWWCF0GLtDG5nRzRA/exec",
       "description": "pdf 문제 파일 업로드 후 비슷한 유형 문제 만들기 툴"
     },
     {
